@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="demobanktest.newbanktest">
+      <class name="demofreecrm.freecrmcontact">
         <methods>
-          <include name="ate"/>
-          <include name="eat"/>
+          <include name="fgd" invocation-numbers="0 1 2 3"/>
+          <include name="loveu"/>
         </methods>
-      </class> <!-- demobanktest.newbanktest -->
+      </class> <!-- demofreecrm.freecrmcontact -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

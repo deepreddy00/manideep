@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,6 +16,8 @@ public class bank
 	 public static WebDriver driver;
 	 public static Properties pro;
 	 public static Select see;
+	 //static JavascriptExecutor js;
+	 
 	 
 	 public bank()
 	 {
