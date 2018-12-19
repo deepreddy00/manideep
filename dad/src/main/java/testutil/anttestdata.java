@@ -17,25 +17,27 @@ import org.openqa.selenium.TakesScreenshot;
 
 import com.freecrm.testbasefreecrm;
 
-public class anttestdata extends testbasefreecrm
+import condra.condotestbaseclass;
+
+public class anttestdata extends condotestbaseclass
 {
 
 	
 	
-	public static String oat="C:\\Users\\manideep\\git\\manideep\\dad\\src\\main\\java\\javaapachce\\freecrm.xlsx";
+	//public static String oat="C:\\Users\\manideep\\git\\manideep\\dad\\src\\main\\java\\javaapachce\\freecrm.xlsx";
 	
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 20;
 
-	public static String TESTDATA_SHEET_PATH = "C:\\Users\\manideep\\git\\manideep\\dad\\src\\main\\java\\javaapachce\\freecrm.xlsx";
+	public static String TESTDATA_SHEET_PATH = "C:\\Users\\manideep\\git\\manideep\\dad\\src\\main\\java\\condra\\jim.xlsx";
 	static Sheet sheet;
 	static Workbook book;
 
 	
 
-	public void switchToFrame() {
-		driver.switchTo().frame("mainpanel");
-	}
+	//public void switchToFrame() {
+		//driver.switchTo().frame("mainpanel");
+	//}
 
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;

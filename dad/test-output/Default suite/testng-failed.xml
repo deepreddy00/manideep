@@ -5,7 +5,7 @@
     <classes>
       <class name="demofreecrm.freecrmcontact">
         <methods>
-          <include name="fgd" invocation-numbers="0 1 2 3"/>
+          <include name="fgd" invocation-numbers="3"/>
           <include name="loveu"/>
         </methods>
       </class> <!-- demofreecrm.freecrmcontact -->

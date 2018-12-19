@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+
+  <parameter name="name" value="mani"/>
+  <parameter name="sur" value="vallapu"/>
+  <parameter name="id" value="987878"/>
+  <parameter name="gender" value="male"/>
+  <parameter name="h" value="joiny"/>
+  <parameter name="area" value="safilguda"/>
+  <parameter name="cites" value="telangana"/>
+  <parameter name="state" value="pak"/>
+  <parameter name="country" value="malkajgiri"/>
+  <parameter name="zip" value="500056"/>
+  <parameter name="num1" value="9878987998"/>
+  <parameter name="num2" value="9878987998"/>
+  <parameter name="num3" value="9878987998"/>
+   <classes>
+      <class name="moi.master6"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

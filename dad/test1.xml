@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+   <parameter name="name" value="mani"/>
+  <parameter name="sur" value="vallapu"/>
+  <parameter name="id" value="987878"/>
+  <parameter name="gender" value="male"/>
+  
+    <classes>
+      <class name="moi.master3"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
