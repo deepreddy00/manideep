@@ -26,7 +26,8 @@ public void eat() throws Exception
 	Thread.sleep(2000);
 	jrt.bro();
 	Thread.sleep(2000);
-    // porty.poster();
+    //porty.poster();
+	Thread.sleep(2000);
 	}
    @Test
 	public void ate() throws Exception

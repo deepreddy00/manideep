@@ -26,6 +26,7 @@ public class gurutest extends bank
 		bo.bro();
 		Thread.sleep(7000);
 		bo1.poste();
+		Thread.sleep(2000);
 		
 		
 		
