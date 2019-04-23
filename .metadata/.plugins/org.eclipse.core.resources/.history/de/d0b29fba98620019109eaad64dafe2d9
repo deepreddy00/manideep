@@ -1,0 +1,103 @@
+package baseclk;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import baseclas.url;
+import common.CommonLib;
+
+public class emailpage extends url
+
+
+{
+
+	
+	public emailpage()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(id="name")
+	WebElement name;
+	
+	@FindBy(name="email")
+	WebElement email;
+	
+	@FindBy(name="phone")
+	WebElement number;
+	
+	@FindBy(name="postcode")
+	WebElement post;
+	
+	
+	@FindBy(id="status")
+	WebElement status;
+	
+	@FindBy(name="message")
+	WebElement message;
+	
+	@FindBy(xpath="//span[@class='ui-form__toggle']")
+	WebElement spa;
+	
+	@FindBy(xpath="//div[@class='recaptcha-checkbox-checkmark']")
+	WebElement span1;
+	
+	@FindBy(xpath="//input[@type='submit']")
+	WebElement clik;
+	
+	
+	
+	public void emailaget()
+	{
+		name.sendKeys("manideep");
+		email.sendKeys("rock@gmail.com");
+		number.sendKeys("087392100");
+		post.sendKeys("1683");
+		CommonLib jj=new CommonLib(driver);
+          jj.getDropdownValue(status, 3);	
+          message.sendKeys("l love dad and mmom ");
+          
+          Actions ghk=new Actions(driver);
+          ghk.moveToElement(spa).click();
+          //spa.click();
+          //span1.click();
+          ghk.moveToElement(span1).click();
+          clik.click();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,111 @@
+package baseclk;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import baseclas.url;
+import common.CommonLib;
+
+public class emailpage extends url
+
+
+{
+
+	
+	public emailpage()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(id="name")
+	WebElement name;
+	
+	@FindBy(name="email")
+	WebElement email;
+	
+	@FindBy(name="phone")
+	WebElement number;
+	
+	@FindBy(name="postcode")
+	WebElement post;
+	
+	
+	@FindBy(id="status")
+	WebElement status;
+	
+	@FindBy(name="message")
+	WebElement message;
+	
+	@FindBy(xpath="//label[@class='ui-form__label-wrap']")
+	WebElement spa;
+	
+	@FindBy(xpath="//div[@class='recaptcha-checkbox-checkmark']")
+	WebElement span1;
+	
+	@FindBy(xpath="//input[@type='submit']")
+	WebElement clik;
+	
+	@FindBy(xpath="//tr[2]//td[2]//div[1]//label[4]")
+	WebElement cl;
+	
+	
+	
+	public void emailaget()
+	{
+		name.sendKeys(" manideep reddy");
+		email.sendKeys("rock@gmail.com");
+		number.sendKeys("087392100");
+		post.sendKeys("1683");
+		CommonLib jj=new CommonLib(driver);
+          jj.getDropdownValue(status, 3);	
+          message.sendKeys("l love dad and mmom ");
+          
+          url hjo=new url();
+          hjo.javascripy(spa);
+          cl.click();
+          //Actions ghk=new Actions(driver);
+          //ghk.moveToElement(spa).click();
+          //spa.click();
+          //span1.click();
+          //g//hk.moveToElement(span1).click();
+          hjo.javascripy(span1);
+          
+          clik.click();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

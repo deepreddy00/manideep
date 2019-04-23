@@ -1,0 +1,52 @@
+package zpppla;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import baseclas.url;
+
+public class search  extends url
+{
+	url h=new url();
+
+	@FindBy(xpath="//ul[@class='listing-results clearfix js-gtm-list']/li[@id]/div/div[2]/a")
+	private List<WebElement> searcb;
+
+	public List<WebElement> getPropertyList(){
+		 return searcb;
+	}
+	public void seac()
+	{
+		
+	
+List<WebElement> sdf=searcb;
+for(WebElement el:sdf)
+{
+	System.out.println(el.getText());
+	int count=0;
+	if(count==5)
+	{
+		h.javascripy(el);
+	}
+	
+}
+
+
+
+
+
+
+	}
+	
+	
+	
+	
+	
+	
+
+
+}

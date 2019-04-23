@@ -1,0 +1,110 @@
+package baseclk;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import baseclas.url;
+import common.CommonLib;
+
+public class searchpage  extends url
+{
+
+	
+	public searchpage()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	
+	
+	@FindBy(xpath="//ul[@class='listing-results clearfix js-gtm-list']/li[@id]/div/div[2]/a")
+	public List<WebElement> d;
+	
+	
+	
+	@FindBy(xpath="//div[@class='dp-sidebar-wrapper__contact']//div/a[@class='ui-agent__details']/div[@class='ui-agent__text']/h4")
+			WebElement dffg;
+	
+	
+	@FindBy(xpath="//div[@id='content']/h1")
+	WebElement hj;
+	
+	
+	
+	public List<WebElement> getpropertylist()
+	{
+		return d;
+	}
+	
+	
+public void ele()
+{
+	List<WebElement> wer=getpropertylist();
+int count=0;
+	System.out.println(wer.size());
+    
+		for(WebElement et:wer)
+		{
+		count++;
+		if(count==10)
+		{
+			String href=et.getAttribute("href");
+			System.out.println(href);
+			CommonLib df=new CommonLib(driver);
+			df.scrollDown();
+			 url akk=new url();
+				akk.javascripy(et);
+			String dd=driver.getCurrentUrl();
+			System.out.println(dd);
+			if(dd.contains(href))
+					{
+				         Assert.assertTrue(true);
+				        
+					}
+			else
+			{
+			
+			}
+			break;
+			
+		}
+	
+		
+		}
+
+	//Collections.sort(d, Collections.reverseOrder());
+}
+	
+	public void fgh()
+	{
+		String j=dffg.getText();
+		System.out.println(j);
+		dffg.click();
+		String l=hj.getText();
+		System.out.println(l);
+		
+		
+		
+	}
+	
+	
+	
+}
+
+	
+	
+	
+
+
+
+
+
+
+
+

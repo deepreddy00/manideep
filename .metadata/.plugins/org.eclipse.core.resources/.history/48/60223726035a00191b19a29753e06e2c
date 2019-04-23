@@ -1,0 +1,111 @@
+package zpppla;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import baseclas.url;
+
+public class london extends url
+{
+	
+public london()
+{
+	PageFactory.initElements(driver, this);
+}
+
+
+@FindBy(id="search-input-location")
+WebElement qwrt;
+
+@FindBy(id="search-submit")
+WebElement tyuio;
+
+@FindBy(xpath="//li[starts-with(@id,'listing_5106')]//ancestor::div[4]//a[contains(text(),'000')]")
+WebElement qe;
+
+
+//li[@class='srp clearfix']/div[1]/div[@class='agent_logo']/a[contains(text(),'£475,000')]
+
+
+
+//xpath="//li[starts-with(@id,'51061')]//ancestor::div[4]//a
+
+
+
+	
+	
+	
+public void fs() throws Throwable
+{
+	Thread.sleep(4000);
+	qwrt.sendKeys("London");
+	tyuio.click();
+	
+	
+	
+	
+}
+	
+
+
+public void scrollDown() {
+	JavascriptExecutor jse = (JavascriptExecutor) driver;
+	jse.executeScript("window.scrollBy(0,500)", "");
+}
+
+
+public void cl()
+{
+	//String er=qe.getText();
+	//System.out.println(er);
+	Actions weee=new Actions(driver);
+	weee.moveToElement(qe).click().build().perform();
+	ArrayList<WebElement> qe= new ArrayList<WebElement>();
+	for(int i=0;i<qe.size();i++)
+	{
+		System.out.println(qe.get(i));
+	
+	String er=((WebElement) qe).getText();
+	System.out.println(er);
+	}
+	
+	
+}
+
+
+public ArrayList<WebElement> ad()
+{
+	ArrayList<WebElement> qe= new ArrayList<WebElement>();
+        Iterator<WebElement> we= qe.iterator();
+       int df= qe.size();
+       System.out.println(df);
+       for(int i=0;i<=df;i++)
+        while(we.hasNext())
+        {
+        	WebElement qr= we.next();
+        	System.out.println(qr);
+        }
+
+
+        
+        return qe;
+}
+
+
+
+
+
+
+
+
+}
+
+

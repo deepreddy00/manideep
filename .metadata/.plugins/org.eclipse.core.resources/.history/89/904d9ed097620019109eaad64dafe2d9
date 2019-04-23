@@ -1,0 +1,41 @@
+package ram;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import baseclas.url;
+import baseclk.searchpage;
+import zapplpages.homepage;
+
+public class home1 extends url
+{
+	@BeforeClass
+	public void hon()
+	{
+		url jk=new url();
+		jk.bro("chrome");
+	}
+	
+	@Test
+	public void d() throws Throwable
+	{
+		homepage jj=new homepage();
+		jj.mall();
+		searchpage kl=new searchpage();
+		kl.ele();
+		kl.fgh();
+		
+	}
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+}

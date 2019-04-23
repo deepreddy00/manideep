@@ -1,0 +1,84 @@
+package baseclk;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import baseclas.url;
+
+public class searchpage  extends url
+{
+
+	
+	public searchpage()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	
+	
+	@FindBy(xpath="//ul[@class='listing-results clearfix js-gtm-list']/li[@id]/div/div[2]/a")
+	public List<WebElement> d;
+	
+	public List<WebElement> getpropertylist()
+	{
+		return d;
+	}
+	
+	
+public void ele()
+{
+	List<WebElement> wer=getpropertylist();
+int count=0;
+	System.out.println(wer.size());
+    
+		for(WebElement et:wer)
+		{
+		count++;
+		if(count==5)
+		{
+			String href=et.getAttribute("href");
+			System.out.println(href);
+			String dd=driver.getCurrentUrl();
+			if(dd.contains(href))
+					{
+				         Assert.assertTrue(true);
+				         url akk=new url();
+							akk.javascripy(et);
+					}
+			else
+			{
+			
+			}
+			break;
+			
+		}
+	
+		
+		}
+
+	//Collections.sort(d, Collections.reverseOrder());
+	
+	
+	
+	
+	
+	
+}
+}
+	
+	
+	
+
+
+
+
+
+
+
+

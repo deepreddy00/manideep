@@ -1,0 +1,173 @@
+package zpppla;
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import baseclas.url;
+
+public class london extends url
+{
+public london()
+{
+	PageFactory.initElements(driver, this);
+}
+
+
+@FindBy(id="search-input-location")
+WebElement qwrt;
+
+@FindBy(id="search-submit")
+WebElement tyuio;
+
+
+
+
+
+
+
+//li[@class='srp clearfix']/div[1]/div[@class='agent_logo']/a[contains(text(),'£475,000')]
+
+
+
+//xpath="//li[starts-with(@id,'5106')]//ancestor::div[4]//a
+
+
+
+	
+	
+	
+public void fs() throws Throwable
+{
+	Thread.sleep(4000);
+	qwrt.sendKeys("London");
+	tyuio.click();
+	
+	
+	
+	
+}
+	
+
+
+public void scrollDown() {
+	JavascriptExecutor jse = (JavascriptExecutor) driver;
+	jse.executeScript("window.scrollBy(0,500)", "");
+}
+
+
+public void cl()
+{
+	//String er=qe.getText();
+	//System.out.println(er);
+	WebElement rt= driver.findElement(By.xpath("//*[contains(@id,'listing_510')]/div/div[2]/a"));
+	Actions weee=new Actions(driver);
+	weee.moveToElement( rt).click().build().perform();
+	
+	//String er= ((WebElement) rt).getText();
+	//System.out.println(er);
+	}
+	
+	
+
+
+
+public void ad()
+{
+	
+	
+	//List<WebElement> qe1= driver.findElements(By.xpath("//li[starts-with(@id,'5106')]"));
+			//ancestor::div[4]//a[contains(@class,'listing-results-price text-price')]"));
+	//List<WebElement> qe1=driver.findElements(By.tagName("ul"));
+	List<WebElement> qe1= driver.findElements(By.xpath("//*[contains(@id,'listing_510')]/div/div[2]/a"));
+	//ArrayList<WebElement> qe1= new ArrayList<WebElement>();
+	System.out.println(qe1.size());
+	
+        Iterator<WebElement> we=qe1.iterator();
+        while(we.hasNext())
+        {
+        	String qr= we.next().getText();
+        	System.out.println(qr);
+        	
+        
+        for(int i=0;i<qe1.size();i++)
+        {
+        	
+        	String er=qe1.get(i).getText();
+        	System.out.println(er);
+        }
+      Collections.sort(qe1,Collections.reverseOrder());
+        
+        }
+        //System.out.println("arraylist in descending oder:");
+        //for(int i=0;i<qe1.size();i++)
+        //{
+        	
+        	//String er=qe1.get(i).getText();
+        //	System.out.println(er);
+       // }
+        
+        
+        
+        		//if(i==5)
+        		//{
+        			   //scrollDown();
+        			   //((JavascriptExecutor)driver).executeScript("window.scrollTo(0,"+qe1..x+")");
+        		      // qe1.get(5).click();	
+        			//System.out.println(er);
+        			
+        		//}
+        			
+        		//}
+
+
+        }
+
+
+public void fhdk()
+{
+	List<WebElement> anchors= driver.findElements(By.xpath("//*[contains(@id,'listing_510')]/div/div[2]/a"));
+	int df=anchors.size();
+	System.out.println(df);
+	
+	Iterator<WebElement> i=anchors.iterator();
+	int j=0;
+	while(i.hasNext())
+	{
+		WebElement anchor=i.next();
+		String href=anchor.getAttribute("href");
+		System.out.println(href);
+		//if(anchor.getAttribute("href").contains(href))
+		//{
+			//j++;
+		//}
+	//	if(anchor.getAttribute("href").contains(href) && j==position)
+//{
+			//anchor.click();
+			//break;
+			
+	
+		}
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+

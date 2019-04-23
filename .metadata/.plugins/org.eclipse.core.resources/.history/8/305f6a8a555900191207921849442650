@@ -1,0 +1,64 @@
+package ram;
+
+import java.awt.AWTException;
+import java.io.IOException;
+import java.lang.reflect.Method;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import baseclas.BaseClass;
+import baseclas.manideepexceldataprovider;
+import baseclas.url;
+import common.CommonLib;
+import common.ExcelOperations;
+import orangehrm.homepage;
+import orangehrm.pimpages;
+import zpppla.london;
+
+public class home 
+{
+	//homepage hdj;
+	//pimpages hjk;
+	WebDriver driver;
+	london jii;
+	CommonLib co;
+
+@BeforeClass
+public void ff()
+{
+	url hd=new url();
+	hd.bro();
+	//hdj=new homepage();
+	//hdj.kijj();
+}
+@Test
+public void qoo() throws Throwable
+{
+	jii=new london();
+	//co=new CommonLib(driver);
+	jii.fs();
+	Thread.sleep(4000);
+	jii.scrollDown();
+	driver.switchTo().frame("_hjRemoteVarsFrame");
+	jii.cl();
+	jii.ad();
+	
+	
+	}
+
+}
+
+
+
+	
+	
+	
+	
+	
+	
+	
+

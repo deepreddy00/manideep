@@ -1,0 +1,76 @@
+package zapplpages;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+import baseclas.url;
+import common.CommonLib;
+
+public class homepage extends url 
+{
+	
+	CommonLib com=new CommonLib(driver);
+
+	
+	public homepage()
+	{
+	
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+	@FindBy(how=How.ID,using="search-input-location")
+	WebElement ghj;
+	
+
+	
+	@FindBy(how=How.ID,using="forsale_price_min")
+	WebElement g;
+	
+	
+	@FindBy(how=How.ID,using="forsale_price_max")
+	WebElement j;
+	
+	
+	
+	@FindBy(how=How.ID,using="property_type")
+	WebElement j1;
+	
+	@FindBy(how=How.ID,using="beds_min")
+	WebElement j2;
+	
+	@FindBy(how=How.ID,using="search-submit")
+	WebElement sead;
+	
+
+	
+	
+public void mall() throws Throwable
+{
+	ghj.sendKeys("london");
+	//Thread.sleep(3000);
+	//ghj.sendKeys(Keys.ARROW_DOWN.ENTER);
+	com.getDropdownValue(g, 5);
+    com.explicitWait(j);
+		com.getDropdownValue(j, 4);
+		com.getDropdownValue(j1, 0);
+	com.getDropdownValue(j2, 3);
+
+   sead.click();	
+	
+	}
+		
+	
+	
+}
+	
+
+
+
+
+
+
+

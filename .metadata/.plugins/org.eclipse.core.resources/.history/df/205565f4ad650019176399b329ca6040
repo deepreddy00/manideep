@@ -1,0 +1,39 @@
+package makemytriptests;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import makemytrip.Baseclass;
+import makemytrippages.Makemytriphomepage;
+
+public class hometest 
+{
+	
+	Baseclass bas;
+	Makemytriphomepage trip;
+
+	@BeforeMethod
+	public void home()
+	{
+		bas=new Baseclass();
+		bas.bro("chrome");
+		}
+	
+	@Test
+	public void trop() throws Throwable
+	{
+		trip=new Makemytriphomepage();
+		trip.home();
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
