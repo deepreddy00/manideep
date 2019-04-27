@@ -1,10 +1,15 @@
 package makemytrip;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +20,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Baseclass 
 {
@@ -51,6 +58,7 @@ public class Baseclass
 				
 				
 				driver.get(patry.getProperty("url"));
+				driver.manage().deleteAllCookies();
 				driver.manage().window().maximize();
 				}
 				
@@ -80,6 +88,7 @@ public class Baseclass
 		options.addArguments("disable-infobars");
 		options.addArguments("--disable-web-security");
 		options.addArguments("--start-maximized");
+		options.addArguments("--incognito");
 		options.setExperimentalOption("useAutomationExtension", false);
 		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
@@ -102,6 +111,7 @@ public class Baseclass
 		WebDriver driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(url);
+		
 		return driver;
 	}
 
@@ -116,9 +126,55 @@ public class Baseclass
 
 
 	
+	
+	public void opneNewTabRobot() throws Throwable {
+
+		Robot robot = new Robot();  // Robot class throws AWT Exception	
+        Thread.sleep(2000); // Thread.sleep throws InterruptedException	
+        robot.keyPress(KeyEvent.VK_DOWN);  // press arrow down key of keyboard to navigate and select Save radio button	
+        
+        Thread.sleep(2000);  // sleep has only been used to showcase each event separately	
+        robot.keyPress(KeyEvent.VK_TAB);	
+        Thread.sleep(2000);	
+        robot.keyPress(KeyEvent.VK_TAB);	
+        Thread.sleep(2000);	
+        robot.keyPress(KeyEvent.VK_TAB);	
+        Thread.sleep(2000);	
+        robot.keyPress(KeyEvent.VK_ENTER);
+	}
+	
+	
+	
+	public void acceptAlert() {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, 15);
+			wait.until(ExpectedConditions.alertIsPresent());
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+			alert.dismiss();
+		} catch (Exception e) {
+		}
+	}
 
 
-
+	
+	
+	
+	public void haa(WebElement el)
+	{
+		Boolean sd=el.isDisplayed();
+		if(sd.equals(true))
+		{
+			el.click();
+		}
+		else
+		{
+			System.out.println("element not visiable");
+			
+		}
+		
+		
+	}
 
 
 

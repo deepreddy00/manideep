@@ -14,14 +14,14 @@ public class hometest
 	Makemytriphomepage trip;
 	Depatureflights dep;
 
-	@BeforeMethod
+	@Test(priority=0)
 	public void home()
 	{
 		bas=new Baseclass();
 		bas.bro("chrome");
 		}
 	
-	@Test
+	@Test(priority=1)
 	public void trop() throws Throwable
 	{
 		trip=new Makemytriphomepage();
@@ -30,12 +30,33 @@ public class hometest
 		
 		
 	}
-	@Test
-	public void hj()
+	
+	@Test(priority=2)
+	public void gj() throws Throwable
 	{
+		
 		dep=new Depatureflights();
 		dep.depature();
 		dep.rturn();
+		
+		
+		
+	}
+	
+	@Test(priority=3)
+	public void gjk() throws Throwable
+	{
+		
+		dep=new Depatureflights();
+		Thread.sleep(2000);
+		dep.nonstop();
+		dep.depature();
+		dep.rturn();
+		
+		
+		
+		
+		
 	}
 	
 	

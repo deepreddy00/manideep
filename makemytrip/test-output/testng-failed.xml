@@ -5,8 +5,8 @@
     <classes>
       <class name="makemytriptests.hometest">
         <methods>
-          <include name="home"/>
-          <include name="trop"/>
+          <include name="gjk"/>
+          <include name="gj"/>
         </methods>
       </class> <!-- makemytriptests.hometest -->
     </classes>

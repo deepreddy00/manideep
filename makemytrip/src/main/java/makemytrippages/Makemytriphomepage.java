@@ -50,6 +50,17 @@ public class Makemytriphomepage extends Baseclass
 	List<WebElement> cal;
 	
 	
+	@FindBy(xpath="//div[@class='dateInnerCell']")
+	List<WebElement> depo;
+	
+	@FindBy(xpath="//*[@id='root']/div/div[2]/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[2]/div[3]")
+		List<WebElement> rett;
+	
+	
+	//*[@id="ow_domrt-jrny"]/div[2]/div[1]
+	//*[@id="ow_domrt-jrny"]/div[2]/div[2]
+	
+	
 	
 	public void home() throws Throwable
 	{
@@ -63,17 +74,43 @@ public class Makemytriphomepage extends Baseclass
 		//String tommorowsDate ="10-OCTOBER-2019";
 		departure.click();
 		//clander();
-		cal();
 		//departure.clear();
-		jk.clender(driver, departure,"25 Apr 19");
+		Thread.sleep(7000);
+		//jk.clender(driver, departure,"27-04-19");
 		//ret.click();
-		jk.clender(driver, ret,"25 Apr 19" );
-		
+		//jk.clender(driver, ret,"30-04-19" );
+	     cal("30");
+	     Thread.sleep(4000);
+	     cal("5");
+	     Thread.sleep(7000);
 		jk.javascripy(search);
 		
 		
 		
 	}
+	
+	
+	
+	
+
+	public void retu()
+	{
+	rett.size();
+	
+	
+	for(int i=0;i<=rett.size();i++)
+	{
+	String text=rett.get(i).getText();	
+	System.out.println(text);
+	if(text.equalsIgnoreCase("14"))
+	{
+	   rett.get(i).click();
+	   break;
+		
+	}
+	}
+	}
+	
 	
 	public void clander()
 	{
@@ -95,34 +132,31 @@ public class Makemytriphomepage extends Baseclass
 	
 	
 	
-	public void cal()
+	public void cal(String value)
 	{
-	cal.size();
+	depo.size();
 	
 	
-	
-	for(WebElement se:cal)
+	for(int i=0;i<=depo.size();i++)
 	{
+	String text=depo.get(i).getText();	
+	System.out.println(text);
+	if(text.equalsIgnoreCase(value))
+	{
+	   depo.get(i).click();
+	   break;
 		
-		System.out.println(se.getText());
-		String data=se.getText();
-		//int dateInt = Integer.parseInt(data);
+	}
 		
-			if(data==("13"))
-			{
-				
-				se.click();
-			}
-			else
-			{
-				System.out.println("poyot");
-				//se.click();
-			}
-			
+		
+		
+	
+	
 		
 		
 	}
 		
+	
 		
 		
 		
