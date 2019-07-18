@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="snappicpages.TestAllureListener"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="prosnappictests.proeventlogin">
+        <methods>
+          <include name="gree"/>
+          <include name="create"/>
+          <include name="eventdetails"/>
+          <include name="lo"/>
+        </methods>
+      </class> <!-- prosnappictests.proeventlogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

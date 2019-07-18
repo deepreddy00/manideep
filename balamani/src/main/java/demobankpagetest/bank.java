@@ -21,7 +21,7 @@ public class bank
  {
 	 pro=new Properties();
 	 try {
-		pro.load(new FileInputStream("C:\\Users\\manideep\\Downloads\\eclipse-java-neon-3-win32-x86_64\\eclipse\\ramkey\\balamani\\src\\main\\java\\demobankpage1\\tor.properties"));
+		pro.load(new FileInputStream("//Users//MushroomCloud//git//manideep//balamani//src//main//java//demobankpage1//tor.properties"));
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -37,13 +37,13 @@ public class bank
 	 String ho=pro.getProperty("browser");
 		if(ho.equals("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\manideep\\Desktop\\chromedriver_win32\\chromedriver.exe");
-			driver=new ChromeDriver();
+			System.setProperty("webdriver.chrome.driver", "/Users/MushroomCloud/git/manideep/balamani/gecodriver/chromedriver 3");
+			 driver=new ChromeDriver();
 		}
 		else if(ho.equals("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\manideep\\Downloads\\geckodriver-v0.20.1-win32\\geckodriver.exe");
-			driver=new FirefoxDriver();
+			System.setProperty("webdriver.gecko.driver", "//Users/MushroomCloud//git//manideep//balamani//gecodriver//geckodriver");
+			 driver=new FirefoxDriver();
 			}
 		
 		

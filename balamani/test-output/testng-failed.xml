@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [testng]">
-  <test name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="demobanktest.gurutest">
+      <class name="prosnappictests.enterprisewventtests">
         <methods>
-          <include name="fg"/>
+          <include name="option"/>
         </methods>
-      </class> <!-- demobanktest.gurutest -->
+      </class> <!-- prosnappictests.enterprisewventtests -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [testng] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

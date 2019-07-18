@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="demobanktest.newbanktest">
+      <class name="prosnappictests.enterprisewventtests">
         <methods>
-          <include name="pot"/>
-          <include name="ate"/>
-          <include name="eat"/>
+          <include name="option"/>
         </methods>
-      </class> <!-- demobanktest.newbanktest -->
+      </class> <!-- prosnappictests.enterprisewventtests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
