@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import snappicpages.CommonLib;
 import snappicpages.bank;
 
-public class filters extends bank
+public class filters extends demobankpagetest.bank
 {
 	
 	public filters()
